@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+#root,
+.App,
+html,
+body{
+    height: 100vh;
+}
+
+
+body{
+    @apply bg-mainBg;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.App{
+    position: relative;
+}
+
+.dna-wrapper{
+    z-index: 9999 !important;
+    place-self: center;
+
+}
+/* @media screen and (max-width:500px) {
+    html {
+        font-size: 70%;
+    }
+} */
+
