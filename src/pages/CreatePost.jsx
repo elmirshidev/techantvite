@@ -21,7 +21,7 @@ function CreatePost() {
         const formData = new FormData()
         formData.set("caption",caption);
         formData.append("file" , file[0])
-        fetch('/api/createpost' , {
+        fetch('http://143.42.203.226/createpost' , {
             credentials:'include',
             method:'POST',
             body:formData

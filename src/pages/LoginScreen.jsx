@@ -28,7 +28,7 @@ function LoginScreen() {
 
     function loginUser(values) {
         setLoader(true)
-        fetch('/api/login', {
+        fetch('http://143.42.203.226/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials:'include',
