@@ -38,7 +38,7 @@ function RegisterScreen() {
 
     function handleCode(values, setFieldValue) {
         setLoader(true)
-        fetch('api/verifyemail', {
+        fetch('https://www.api.techantgram.online/verifyemail', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -61,7 +61,7 @@ function RegisterScreen() {
 
     function registerUser(values, setFieldValue) {
         setLoader(true)
-        fetch('api/register', {
+        fetch('https://www.api.techantgram.online/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
