@@ -50,6 +50,7 @@ function RegisterScreen() {
                     setLoader(false);
                     setFieldValue('step', values.step + 1);
                 } else {
+                    setLoader(false)
                     throw new Error('Email verification failed.');
                 }
             })
