@@ -23,7 +23,7 @@ function Navbar() {
 
 
   useEffect(() => {
-    fetch('http://143.42.203.226/profile', { credentials: 'include' })
+    fetch('https://www.api.techantgram.online/profile', { credentials: 'include' })
       .then(response => {
         if (response.ok) {
           dispatch(auth(true));
@@ -45,7 +45,7 @@ function Navbar() {
 
 
   function logoutUser() {
-    fetch('http://143.42.203.226/logout', { credentials: 'include' })
+    fetch('https://www.api.techantgram.online/logout', { credentials: 'include' })
       .then(response => {
         if (response.ok) {
           dispatch(logout())
@@ -67,7 +67,7 @@ function Navbar() {
           <div className="flex gap-x-4 items-center">
             <Link to={`/users/${user?._id}`} className="flex items-center gap-x-2">
               <div className="w-[50px] h-[50px]">
-                <img src={user?.profileImage ? `http://143.42.203.226/${user?.profileImage}` : pp} className="rounded-full h-full w-full" />
+                <img src={user?.profileImage ? `https://www.api.techantgram.online/${user?.profileImage}` : pp} className="rounded-full h-full w-full" />
               </div>
               <p className="370:hidden flex items-center gap-x-2">
                 {user?.username}

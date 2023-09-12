@@ -28,7 +28,7 @@ function LoginScreen() {
 
     function loginUser(values) {
         setLoader(true)
-        fetch('http://143.42.203.226/login', {
+        fetch('https://www.api.techantgram.online/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials:'include',

@@ -12,7 +12,7 @@ function ExplorePage() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('http://143.42.203.226/allusers', {
+    fetch('https://www.api.techantgram.online/allusers', {
       credentials: 'include',
       method: 'GET'
     }).then((res) => {
@@ -54,7 +54,7 @@ function ExplorePage() {
   const usersMap = users.map((ui, key) => {
     return <Link key={key} className="flex gap-x-4 items-center" to={`/users/${ui?._id}`}>
       <div className="w-[50px] h-[50px]">
-        <img src={`http://143.42.203.226/${ui?.profileImage}`} alt="profile" className="rounded-full h-full w-full" />
+        <img src={`https://www.api.techantgram.online/${ui?.profileImage}`} alt="profile" className="rounded-full h-full w-full" />
       </div>
       <div className="flex gap-x-2">
         <p>{ui?.username}</p>

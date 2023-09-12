@@ -80,7 +80,6 @@ function RegisterScreen() {
                             _id: data._id,
                             profileImage: data.profileImage,
                             isAdmin:data.isAdmin
-
                         }))
                     })
                     navigate('/');

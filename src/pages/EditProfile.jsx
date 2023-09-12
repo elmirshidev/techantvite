@@ -13,7 +13,7 @@ function EditProfile() {
   const userRedux = useSelector((state) => state.user.user)
   const dispatch = useDispatch()
   useEffect(() => {
-    fetch('http://143.42.203.226/myprofile', {
+    fetch('https://www.api.techantgram.online/myprofile', {
       credentials: 'include'
     }).then(response => {
       if (response.ok) {
@@ -38,7 +38,7 @@ function EditProfile() {
         formData.set('username', username)
         formData.set('bio', bio)
         formData.append('file', file[0])
-        fetch('http://143.42.203.226/editprofile', {
+        fetch('https://www.api.techantgram.online/editprofile', {
             credentials: "include",
             method: 'PUT',
             body: formData
@@ -70,7 +70,7 @@ function EditProfile() {
     return (
         <section className='flex flex-col gap-y-4 items-center'>
             <div className='w-[100px] h-[100px]'>
-                <img src={user?.profileImage ? `http://143.42.203.226/${user.profileImage}` : pp} className='rounded-full h-full w-full' />
+                <img src={user?.profileImage ? `https://www.api.techantgram.online/${user.profileImage}` : pp} className='rounded-full h-full w-full' />
             </div>
 
             <div className='flex justify-center items-center container'>

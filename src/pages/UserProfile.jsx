@@ -31,7 +31,7 @@ function UserProfile() {
     // async function fetchUserData() {
     //     try {
     //       setLoading(true);
-    //       const response = await fetch(`http://143.42.203.226/users/${Id}`, {
+    //       const response = await fetch(`https://www.api.techantgram.online/users/${Id}`, {
     //         credentials: 'include',
     //       });
     //       if (response.ok) {
@@ -50,7 +50,7 @@ function UserProfile() {
     useEffect(() => {
         setLoader(true);
         
-        fetch(`http://143.42.203.226/users/${Id}`, {
+        fetch(`https://www.api.techantgram.online/users/${Id}`, {
           credentials: 'include'
         }).then(response => {
           if (response.ok) {
@@ -94,7 +94,7 @@ function UserProfile() {
 
             const method = following ? 'DELETE' : 'POST';
 
-            const response = await fetch(`http://143.42.203.226/follow/${Id}`, {
+            const response = await fetch(`https://www.api.techantgram.online/follow/${Id}`, {
                 method,
                 credentials: 'include',
                 headers: {
@@ -136,7 +136,7 @@ function UserProfile() {
 
             const method = likeState ? 'DELETE' : 'POST';
 
-            const response = await fetch('http://143.42.203.226/like', {
+            const response = await fetch('https://www.api.techantgram.online/like', {
                 credentials: 'include',
                 method,
                 headers: {
@@ -193,7 +193,7 @@ function UserProfile() {
     async function postComment() {
         try {
             setLoading(true);
-            const response = await fetch('http://143.42.203.226/comment', {
+            const response = await fetch('https://www.api.techantgram.online/comment', {
                 credentials: 'include',
                 headers: { 'Content-Type': 'application/json' },
                 method: 'POST',
@@ -256,7 +256,7 @@ function UserProfile() {
                     user?.followers?.map((ui, key) => (
                         <Link key={key} onClick={() => closeModalNavigate(ui?._id)} className="flex gap-x-3 items-center">
                             <div className="w-[50px] h-[50px]">
-                                <img src={`http://143.42.203.226/${ui?.profileImage}`} alt="profile" className="rounded-full h-full w-full" />
+                                <img src={`https://www.api.techantgram.online/${ui?.profileImage}`} alt="profile" className="rounded-full h-full w-full" />
                             </div>
                             <p className="flex items-center gap-x-2">
                                 {ui?.username}
@@ -271,7 +271,7 @@ function UserProfile() {
                     user?.following?.map((ui, key) => (
                         <Link key={key} onClick={() => closeModalNavigate(ui?._id)} className="flex gap-x-3 items-center">
                             <div className="w-[50px] h-[50px]">
-                                <img src={`http://143.42.203.226/${ui?.profileImage}`} alt="profile" className="rounded-full h-full w-full" />
+                                <img src={`https://www.api.techantgram.online/${ui?.profileImage}`} alt="profile" className="rounded-full h-full w-full" />
                             </div>
                             <p className="flex items-center gap-x-2">
                                 {ui?.username}
@@ -288,12 +288,12 @@ function UserProfile() {
                         {photoId !== -1 && (
                             <div className="flex items-center 796:flex-col">
                                 <div className="h-[500px] w-[500px]  796:hidden flex justify-center items-center">
-                                    <img src={`http://143.42.203.226/${user?.posts[photoId]?.image}`} className="w-full h-full object-contain" />
+                                    <img src={`https://www.api.techantgram.online/${user?.posts[photoId]?.image}`} className="w-full h-full object-contain" />
                                 </div>
                                 <div className="flex flex-col gap-y-4 p-4">
                                     <div className="flex items-center gap-x-2 border-b-[1px] p-2 flex-wrap">
                                         <div className="w-[50px] h-[50px]">
-                                            <img src={`http://143.42.203.226/${user?.profileImage}`} className="rounded-full object-contain h-full w-full" />
+                                            <img src={`https://www.api.techantgram.online/${user?.profileImage}`} className="rounded-full object-contain h-full w-full" />
                                         </div>
                                         <p className="flex items-center gap-x-2">
                                             {user?.username}
@@ -309,7 +309,7 @@ function UserProfile() {
                                             <div key={key} className="flex gap-x-4 items-center flex-wrap gap-y-1">
                                                 <Link onClick={() => closeModalNavigate(ui?.user?._id)} className="flex items-center gap-x-2">
                                                     <div className="w-[50px] h-[50px]">
-                                                        <img src={`http://143.42.203.226/${ui?.user?.profileImage}`} className="rounded-full object-contain h-full w-full" />
+                                                        <img src={`https://www.api.techantgram.online/${ui?.user?.profileImage}`} className="rounded-full object-contain h-full w-full" />
                                                     </div>
                                                     <p className="flex items-center gap-x-2">
                                                         {ui?.user?.username}
@@ -354,7 +354,7 @@ function UserProfile() {
 
             <div className='flex gap-x-8 items-center border-b-black border-b pb-10 500:flex-col 500:gap-y-4'>
                 <div className=' w-[150px] h-[150px] object-contain '>
-                    <img src={user?.profileImage ? `http://143.42.203.226/${user.profileImage}` : pp} className='rounded-full h-full w-full' />
+                    <img src={user?.profileImage ? `https://www.api.techantgram.online/${user.profileImage}` : pp} className='rounded-full h-full w-full' />
                 </div>
                 <div className='flex flex-col gap-y-4'>
                     <div className='flex gap-x-4 500:justify-center'>
@@ -428,7 +428,7 @@ function UserProfile() {
                                 <p className='flex items-center gap-x-1 text-black bg-white font-bold'><Like size={25} color='red' /> {ui?.likes?.length || 0}</p>
                                 <p className='flex items-center gap-x-1 text-black bg-white font-bold'><Comment size={25} color='green' /> {ui?.comments?.length || 0}</p>
                             </div> */}
-                            <img src={`http://143.42.203.226/${ui?.image}`} className='w-[309px] h-[309px] object-cover' />
+                            <img src={`https://www.api.techantgram.online/${ui?.image}`} className='w-[309px] h-[309px] object-cover' />
                         </Link>
                     ))}
                 </div>
