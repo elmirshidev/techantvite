@@ -294,7 +294,7 @@ function UserProfile() {
                                 <div className="flex w-full flex-col gap-y-4 p-4">
                                     <div className="flex items-center gap-x-2 border-b-[1px] p-2 flex-wrap">
                                         <div className="w-[50px] h-[50px]">
-                                            <img src={`https://www.api.techantgram.online/${user?.profileImage}`} className="rounded-full object-contain h-full w-full" />
+                                            <img src={user?.profileImage ? `https://www.api.techantgram.online/${user?.profileImage}` : pp} className="rounded-full object-contain h-full w-full" />
                                         </div>
                                         <p className="flex items-center gap-x-2">
                                             {user?.username}
@@ -310,7 +310,7 @@ function UserProfile() {
                                             <div key={key} className="flex gap-x-4 items-center flex-wrap gap-y-1">
                                                 <Link onClick={() => closeModalNavigate(ui?.user?._id)} className="flex items-center gap-x-2">
                                                     <div className="w-[50px] h-[50px]">
-                                                        <img src={`https://www.api.techantgram.online/${ui?.user?.profileImage}`} className="rounded-full object-contain h-full w-full" />
+                                                        <img src={ui?.user?.profileImage ? `https://www.api.techantgram.online/${ui?.user?.profileImage}` : pp} className="rounded-full object-contain h-full w-full" />
                                                     </div>
                                                     <p className="flex items-center gap-x-2">
                                                         {ui?.user?.username}

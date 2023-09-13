@@ -19,7 +19,7 @@ function RegisterScreen() {
     const registerValid = Yup.object().shape({
         username: Yup.string().when('step', {
             is: 1,
-            then: schema => schema.required().min(5,'username must be at least 5 characters').max(20,'Username must be at most 20 characters')
+            then: schema => schema.required().max(20,'Username must be at most 20 characters')
         }),
         password: Yup.string().when('step', {
             is: 1,
