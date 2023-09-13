@@ -301,7 +301,7 @@ function UserProfile() {
                                                 <Tick size={25} fill="blue" />
                                             )}
                                         </p>
-                                        <p>{user?.posts[photoId]?.caption}</p>
+                                        <p className="text-[12px]">{user?.posts[photoId]?.caption}</p>
                                     </div>
 
                                     <div className="flex h-[200px] flex-col gap-y-2 overflow-y-scroll 796:h-[150px]">
