@@ -5,6 +5,7 @@ import { useSelector } from "react-redux"
 import { VscVerified as Tick } from 'react-icons/vsc'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import pp from '../assets/pp.png'
 function ExplorePage() {
   const [users, setUsers] = useState([]);
   const [loader, setLoader] = useState(true)
@@ -54,7 +55,7 @@ function ExplorePage() {
   const usersMap = users.map((ui, key) => {
     return <Link key={key} className="flex gap-x-4 items-center" to={`/users/${ui?._id}`}>
       <div className="w-[50px] h-[50px]">
-        <img src={`https://www.api.techantgram.online/${ui?.profileImage}`} alt="profile" className="rounded-full h-full w-full" />
+        <img src={`https://www.api.techantgram.online/${ui?.profileImage}` || pp} alt="profile" className="rounded-full h-full w-full" />
       </div>
       <div className="flex gap-x-2">
         <p>{ui?.username}</p>
