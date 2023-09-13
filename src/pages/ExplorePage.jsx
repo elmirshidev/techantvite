@@ -69,7 +69,7 @@ function ExplorePage() {
   
 
     <div className="flex items-center justify-center gap-y-5 pt-[50px] pb-[100px] px-6">
-      <div className="flex justify-center gap-y-5">
+      <div className="flex flex-col justify-center gap-y-5">
         {usersMap}
       </div>
       <ToastContainer />
