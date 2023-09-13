@@ -43,7 +43,7 @@ function CreatePost() {
 
     if(!userRedux){
         return <center className="pt-[100px] flex justify-center items-center">
-            <h1 className=" text-gray-950 text-3xl font-[500] flex 500:text-xl">HESAB AC YAVRUM🥰</h1>
+            <h1 className=" text-gray-950 text-3xl font-[500] flex 500:text-xl">Open Accaunt🥰</h1>
             </center>
 
     }
