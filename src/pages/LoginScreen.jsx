@@ -18,7 +18,7 @@ function LoginScreen() {
 
 
     const loginValid = Yup.object().shape({
-        username: Yup.string().required().min(5, 'username must be at least 5 characters').max(20, 'Username must be at most 20 characters'),
+        // username: Yup.string().required().min(5, 'username must be at least 5 characters').max(20, 'Username must be at most 20 characters'),
         password: Yup.string().required().min(5, 'password must be at least 5 characters')
     })
 // 
