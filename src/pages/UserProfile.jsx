@@ -256,7 +256,7 @@ function UserProfile() {
                     user?.followers?.map((ui, key) => (
                         <Link key={key} onClick={() => closeModalNavigate(ui?._id)} className="flex gap-x-3 items-center">
                             <div className="w-[50px] h-[50px]">
-                                <img src={`https://www.api.techantgram.online/${ui?.profileImage}`} alt="profile" className="rounded-full h-full w-full" />
+                                <img src={ui?.profileImage ? `https://www.api.techantgram.online/${ui?.profileImage}` : pp} alt="profile" className="rounded-full h-full w-full" />
                             </div>
                             <p className="flex items-center gap-x-2">
                                 {ui?.username}
@@ -271,7 +271,7 @@ function UserProfile() {
                     user?.following?.map((ui, key) => (
                         <Link key={key} onClick={() => closeModalNavigate(ui?._id)} className="flex gap-x-3 items-center">
                             <div className="w-[50px] h-[50px]">
-                                <img src={`https://www.api.techantgram.online/${ui?.profileImage}`} alt="profile" className="rounded-full h-full w-full" />
+                                <img src={ui?.profileImage ? `https://www.api.techantgram.online/${ui?.profileImage}` : pp} alt="profile" className="rounded-full h-full w-full" />
                             </div>
                             <p className="flex items-center gap-x-2">
                                 {ui?.username}
