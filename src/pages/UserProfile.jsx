@@ -290,7 +290,7 @@ function UserProfile() {
                                 <div className="hidden h-[500px] w-[500px]  796:hidden  justify-center items-center">
                                     {/* <img src={`https://www.api.techantgram.online/${user?.posts[photoId]?.image}`} className="w-full h-full object-contain" /> */}
                                 </div>
-                                <div className="flex flex-col gap-y-4 p-4">
+                                <div className="flex w-full flex-col gap-y-4 p-4">
                                     <div className="flex items-center gap-x-2 border-b-[1px] p-2 flex-wrap">
                                         <div className="w-[50px] h-[50px]">
                                             <img src={`https://www.api.techantgram.online/${user?.profileImage}`} className="rounded-full object-contain h-full w-full" />
