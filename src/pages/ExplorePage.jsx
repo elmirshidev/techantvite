@@ -55,7 +55,7 @@ function ExplorePage() {
   const usersMap = users.map((ui, key) => {
     return <Link key={key} className="flex gap-x-4 items-center" to={`/users/${ui?._id}`}>
       <div className="w-[50px] h-[50px]">
-        <img src={ ui?.profile ? `https://www.api.techantgram.online/${ui?.profileImage}` : pp} alt="profile" className="rounded-full h-full w-full" />
+        <img src={ ui?.profileImage ? `https://www.api.techantgram.online/${ui?.profileImage}` : pp} alt="profile" className="rounded-full h-full w-full" />
       </div>
       <div className="flex gap-x-2">
         <p>{ui?.username}</p>
