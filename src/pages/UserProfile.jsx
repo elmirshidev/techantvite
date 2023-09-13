@@ -417,9 +417,9 @@ function UserProfile() {
                     </div>
                 )}
 
-
+                    
                 <div className='grid grid-cols-3 gap-x-2 gap-y-4 796:grid-cols-2 500:!grid-cols-1 '>
-                    {user?.posts?.reverse().map((ui, key) => (
+                    {user?.posts?.map((ui, key) => (
                         <Link key={key} onClick={() => {
                             setHansi("")
                             setPhotoId(key)
