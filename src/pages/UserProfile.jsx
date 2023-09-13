@@ -288,7 +288,7 @@ function UserProfile() {
                         {photoId !== -1 && (
                             <div className="flex items-center 796:flex-col">
                                 <div className="hidden h-[500px] w-[500px]  796:hidden  justify-center items-center">
-                                    <img src={`https://www.api.techantgram.online/${user?.posts[photoId]?.image}`} className="w-full h-full object-contain" />
+                                    {/* <img src={`https://www.api.techantgram.online/${user?.posts[photoId]?.image}`} className="w-full h-full object-contain" /> */}
                                 </div>
                                 <div className="flex flex-col gap-y-4 p-4">
                                     <div className="flex items-center gap-x-2 border-b-[1px] p-2 flex-wrap">
@@ -318,7 +318,7 @@ function UserProfile() {
                                                         )}
                                                     </p>
                                                 </Link>
-                                                <p className="font-bold whitespace-normal">{ui?.text}</p>
+                                                <p className="font-bold whitespace-normal text-[12px]">{ui?.text}</p>
                                             </div>
                                         ))}
                                     </div>
