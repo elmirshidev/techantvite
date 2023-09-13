@@ -253,7 +253,7 @@ function UserProfile() {
                 </div>
 
                 {hansi === 'followers' &&
-                    user?.followers?.map((ui, key) => (
+                     user?.followers?.map((ui, key) => (
                         <Link key={key} onClick={() => closeModalNavigate(ui?._id)} className="flex gap-x-3 items-center">
                             <div className="w-[50px] h-[50px]">
                                 <img src={ui?.profileImage ? `https://www.api.techantgram.online/${ui?.profileImage}` : pp} alt="profile" className="rounded-full h-full w-full" />
@@ -265,7 +265,8 @@ function UserProfile() {
                                 )}
                             </p>
                         </Link>
-                    ))}
+                    ))
+                   }
 
                 {hansi === 'followings' &&
                     user?.following?.map((ui, key) => (

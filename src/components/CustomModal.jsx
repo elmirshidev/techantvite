@@ -33,7 +33,7 @@ const Modal = ({ isOpen, onClose,children }) => {
                 </svg>
               </button>
             </div>
-            <div>
+            <div className='flex flex-col gap-y-3 overflow-y-auto'>
               {children}
             </div>
           </div>
