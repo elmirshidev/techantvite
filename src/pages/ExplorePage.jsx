@@ -68,8 +68,10 @@ function ExplorePage() {
   return (
   
 
-    <div className="flex flex-col items-center  justify-center gap-y-5 pt-[50px] pb-[100px] px-6">
-      {usersMap}
+    <div className="flex items-center justify-center gap-y-5 pt-[50px] pb-[100px] px-6">
+      <div className="flex justify-center gap-y-5">
+        {usersMap}
+      </div>
       <ToastContainer />
     </div>
   )
