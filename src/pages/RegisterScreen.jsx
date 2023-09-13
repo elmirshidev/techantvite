@@ -65,6 +65,7 @@ function RegisterScreen() {
         fetch('https://www.api.techantgram.online/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            credentials:'include',
             body: JSON.stringify({
                 username: values.username,
                 pass: values.password,
